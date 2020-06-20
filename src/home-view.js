@@ -14,7 +14,11 @@ const Steps = () => {
     <>
       <Step number="1">
         <p className="card-docs-description">
-          <a href="https://auth0.com/signup">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://auth0.com/signup"
+          >
             Sign up for a <strong>free</strong> Auth0 account.
           </a>
         </p>
@@ -23,26 +27,49 @@ const Steps = () => {
         <p className="card-docs-description">Create an Auth0 Application:</p>
         <p className="card-docs-description">
           Open the{" "}
-          <a href="https://manage.auth0.com/#/applications">Applications</a>{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://manage.auth0.com/#/applications"
+          >
+            Applications
+          </a>{" "}
           section of the Auth0 dashboard.
         </p>
         <p className="card-docs-description">
           Click <strong>Create Application</strong>.
         </p>
+        <p className="card-docs-description">
+          Give it a <strong>Name</strong>, such as{" "}
+          <strong>Auth0 React Quickstart</strong>.
+        </p>
+        <p className="card-docs-description">
+          Choose <strong>Single Page Web Applications</strong> as the{" "}
+          <strong>application type</strong>.
+        </p>
+        <p className="card-docs-description">
+          Click <strong>Create</strong>.
+        </p>
       </Step>
       <Step number="3">
         <p className="card-docs-description">
-          In your Auth0 application <strong>Settings</strong>:
+          Update the following fields in your Auth0 Application{" "}
+          <strong>Settings</strong>:
         </p>
-        <p className="card-docs-description">
-          Set <code>{url}</code> as an <strong>Allowed Callback URLs</strong>.
-        </p>
-        <p className="card-docs-description">
-          Set <code>{url}</code> as an <strong>Allowed Logout URLs</strong>.
-        </p>
-        <p className="card-docs-description">
-          Set <code>{url}</code> as an <strong>Allowed Web Origins</strong>.
-        </p>
+        <div className="fields">
+          <div className="card-docs-description field">
+            <strong className="field__key">Allowed Callback URLs</strong>
+            <pre className="field__value">{url}</pre>
+          </div>
+          <div className="card-docs-description field">
+            <strong className="field__key">Allowed Logout URLs</strong>
+            <pre className="field__value">{url}</pre>
+          </div>
+          <div className="card-docs-description field">
+            <strong className="field__key">Allowed Web Origins</strong>
+            <pre className="field__value">{url}</pre>
+          </div>
+        </div>
         <p className="card-docs-description">
           Scroll to the bottom and click <strong>Save Changes</strong>.
         </p>
@@ -89,7 +116,12 @@ const Steps = () => {
       </Step>
       <div className="try-banner">
         <span>Don't have an account yet?</span>
-        <a href="https://auth0.com/signup" className="btn btn-success btn-lg">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://auth0.com/signup"
+          className="btn btn-success btn-lg"
+        >
           Try Auth0 for Free
         </a>
       </div>
